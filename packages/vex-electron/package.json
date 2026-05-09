@@ -1,0 +1,14 @@
+{
+  "name": "vex-electron",
+  "version": "1.0.0",
+  "description": "Electron main process for VEX",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "echo 'Build script for Electron packaging'"
+  },
+  "devDependencies": {
+    "electron": "^42.0.1"
+  }
+}

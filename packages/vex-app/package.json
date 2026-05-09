@@ -1,0 +1,23 @@
+{
+  "name": "vex-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd app && npm start",
+    "build": "cd app && npm run build",
+    "test": "cd app && npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@angular/cli": "^17.3.17",
+    "electron": "^42.0.1",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.5"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "vex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VEX - Open-source API Client for Exploring and Testing APIs",
+  "workspaces": [
+    "packages/vex-app",
+    "packages/vex-electron"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup.js",
+    "dev": "node scripts/dev.js",
+    "dev:web": "npm run start --workspace=packages/vex-app",
+    "dev:electron": "npm run dev --workspace=packages/vex-electron",
+    "build:web": "npm run build --workspace=packages/vex-app",
+    "build:electron": "npm run build --workspace=packages/vex-electron",
+    "clean": "rimraf packages/*/dist packages/*/node_modules node_modules"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "concurrently": "^8.2.2",
+    "fs-extra": "^11.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
