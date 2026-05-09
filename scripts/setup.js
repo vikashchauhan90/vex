@@ -8,14 +8,9 @@ console.log('🚀 Setting up VEX Monorepo...');
 console.log('📦 Installing dependencies...');
 execSync('npm install', { stdio: 'inherit' });
 
-// Build common package first (dependencies)
-console.log('🔨 Building shared packages...');
-execSync('npm run build:vex-common', { stdio: 'inherit' });
-execSync('npm run build:vex-schema', { stdio: 'inherit' });
-execSync('npm run build:vex-query', { stdio: 'inherit' });
-
-// Build converters
-console.log('🔄 Building converters...');
-execSync('npm run build:vex-converters', { stdio: 'inherit' });
+// Build actual workspace packages
+console.log('🔨 Building VEX packages...');
+execSync('npm run build:web', { stdio: 'inherit' });
+execSync('npm run build:electron', { stdio: 'inherit' });
 
 console.log('✅ Setup complete! Run "npm run dev" to start development');

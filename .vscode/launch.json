@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Angular in Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}/packages/vex-app/app/src",
+            "sourceMapPathOverrides": {
+                "webpack:///packages/vex-app/app/src/*": "${workspaceFolder}/packages/vex-app/app/src/*"
+            }
+        },
+        {
+            "name": "Debug Electron Main Process",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+            "program": "${workspaceFolder}/packages/vex-electron/main.js",
+            "args": ["--dev"],
+            "cwd": "${workspaceFolder}/packages/vex-electron",
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,107 @@
+meta {
+  name: "VEX Demo Collection"
+  desc: "Example API requests for testing"
+}
+
+request {
+  name: "Get Posts"
+  method: GET
+  url: https://jsonplaceholder.typicode.com/posts
+  type: http
+
+  headers {
+    Accept: application/json
+    User-Agent: VEX/1.0
+  }
+
+  params {
+    _limit: 10
+    _sort: id
+  }
+}
+
+---
+
+request {
+  name: "Get Post by ID"
+  method: GET
+  url: https://jsonplaceholder.typicode.com/posts/1
+  type: http
+
+  headers {
+    Accept: application/json
+  }
+}
+
+---
+
+request {
+  name: "Create Post"
+  method: POST
+  url: https://jsonplaceholder.typicode.com/posts
+  type: http
+
+  headers {
+    Content-Type: application/json
+    Accept: application/json
+  }
+
+  body: json
+  {
+    "title": "New Post",
+    "body": "This is a new post created with VEX",
+    "userId": 1
+  }
+}
+
+---
+
+request {
+  name: "Update Post"
+  method: PUT
+  url: https://jsonplaceholder.typicode.com/posts/1
+  type: http
+
+  headers {
+    Content-Type: application/json
+    Accept: application/json
+  }
+
+  body: json
+  {
+    "title": "Updated Post",
+    "body": "This post has been updated",
+    "userId": 1
+  }
+}
+
+---
+
+request {
+  name: "Delete Post"
+  method: DELETE
+  url: https://jsonplaceholder.typicode.com/posts/1
+  type: http
+
+  headers {
+    Accept: application/json
+  }
+}
+
+---
+
+request {
+  name: "Get Comments"
+  method: GET
+  url: https://jsonplaceholder.typicode.com/comments
+  type: http
+
+  headers {
+    Accept: application/json
+  }
+
+  params {
+    _limit: 5
+    postId: 1
+  }
+}
