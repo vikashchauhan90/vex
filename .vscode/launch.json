@@ -25,6 +25,26 @@
             "skipFiles": [
                 "<node_internals>/**"
             ]
+        },
+        {
+            "name": "Launch Angular Dev Server",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "${workspaceFolder}/packages/vex-app/app/node_modules/.bin/ng",
+            "args": ["serve", "--port", "4200"],
+            "cwd": "${workspaceFolder}/packages/vex-app/app",
+            "console": "integratedTerminal",
+            "preLaunchTask": "Build vex-common",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Debug VEX (Angular + Electron)",
+            "configurations": ["Launch Angular Dev Server", "Debug Electron Main Process"],
+            "stopAll": true
         }
     ]
 }

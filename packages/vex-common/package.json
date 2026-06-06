@@ -1,0 +1,17 @@
+{
+  "name": "vex-common",
+  "version": "1.0.0",
+  "description": "Common utilities and types for VEX",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist"
+  ]
+}

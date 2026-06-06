@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { KeyValue } from '../models/vex-types';
+import { KeyValue } from 'vex-common';
 import { v4 as uuidv4 } from 'uuid';
 
 @Component({

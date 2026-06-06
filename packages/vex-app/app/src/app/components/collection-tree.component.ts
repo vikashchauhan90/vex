@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CollectionService } from '../services/collection.service';
 import { VexParserService } from '../services/vex-parser.service';
-import { VexItem, VexCollection } from '../models/vex-types';
+import { VexItem, VexCollection } from 'vex-common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

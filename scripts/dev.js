@@ -3,8 +3,10 @@ const fs = require('fs-extra');
 
 console.log('🎯 Starting VEX in development mode...');
 
+const npmCommand = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+
 // Start Angular dev server
-const angular = spawn('npm', ['run', 'dev:web'], {
+const angular = spawn(npmCommand, ['run', 'dev:web'], {
   stdio: 'pipe',
   shell: true
 });
@@ -15,7 +17,7 @@ angular.stdout.on('data', (data) => {
   // Once Angular is ready, start Electron
   if (data.includes('Local:')) {
     console.log('✅ Angular ready, starting Electron...');
-    const electron = spawn('npm', ['run', 'dev:electron'], {
+    const electron = spawn(npmCommand, ['run', 'dev:electron'], {
       stdio: 'inherit',
       shell: true
     });

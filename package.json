@@ -5,7 +5,8 @@
   "description": "VEX - Open-source API Client for Exploring and Testing APIs",
   "workspaces": [
     "packages/vex-app",
-    "packages/vex-electron"
+    "packages/vex-electron",
+    "packages/vex-common"
   ],
   "scripts": {
     "setup": "node scripts/setup.js",

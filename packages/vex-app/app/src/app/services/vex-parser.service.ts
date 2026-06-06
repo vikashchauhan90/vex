@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { VexCollection, VexItem, VexRequest, KeyValue, RequestBody, RequestBodyMode } from '../models/vex-types';
+import { VexCollection, VexItem, VexRequest, KeyValue, RequestBody, RequestBodyMode } from 'vex-common';
 import { v4 as uuidv4 } from 'uuid';
 
 /**

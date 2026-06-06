@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { VexCollection, VexItem, VexRequest, CollectionTreeNode } from '../models/vex-types';
+import { VexCollection, VexItem, VexRequest, CollectionTreeNode } from 'vex-common';
 import { VexParserService } from './vex-parser.service';
 import { ElectronService } from './electron.service';
 

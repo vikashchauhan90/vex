@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { CollectionService } from '../services/collection.service';
 import { RequestExecutorService } from '../services/request-executor.service';
-import { VexRequest, KeyValue } from '../models/vex-types';
+import { VexRequest, KeyValue } from 'vex-common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { v4 as uuidv4 } from 'uuid';

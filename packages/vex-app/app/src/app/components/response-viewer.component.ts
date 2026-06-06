@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RequestExecutorService } from '../services/request-executor.service';
-import { VexResponse } from '../models/vex-types';
+import { VexResponse } from 'vex-common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
